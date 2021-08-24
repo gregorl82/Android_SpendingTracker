@@ -25,6 +25,6 @@ interface MerchantDao {
     @Query("SELECT * FROM merchants")
     fun getAllMerchants(): LiveData<List<Merchant>>
 
-    @Query("DELETE FROM merchants WHERE id = :id")
-    fun getMerchantById(id: Int): LiveData<Merchant>
+    @Query("SELECT * FROM merchants WHERE id = :id")
+    fun getMerchantById(id: String): LiveData<Merchant>
 }
